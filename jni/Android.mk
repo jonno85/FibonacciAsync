@@ -1,0 +1,11 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_LDLIBS := -llog
+LOCAL_CFLAGS	:= -g
+#LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
+LOCAL_SHARED_LIBRARIES += liblog
+LOCAL_SRC_FILES := fib.c
+LOCAL_MODULE    := fib
+
+include $(BUILD_SHARED_LIBRARY)
